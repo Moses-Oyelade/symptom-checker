@@ -1,11 +1,10 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { SymptomModule } from './symptom/symptom.module';
-import { ConditionModule } from './condition/condition.module';
+import { SymptomCheckerModule } from './symptom-checker/symptom-checker.module';
 
 @Module({
-  imports: [SymptomModule, ConditionModule],
+  imports: [SymptomCheckerModule],
   controllers: [AppController],
   providers: [AppService],
 })
